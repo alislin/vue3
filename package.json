@@ -4,10 +4,10 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "dm": " npm run mock | vite",
+    "mock": " npm run mk | vite --mode mock",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-    "mock": "json-server ./mock/file-json.js --c ./mock/json-server.json"
+    "mk": "json-server ./mock/file-json.js --c ./mock/json-server.json"
   },
   "dependencies": {
     "ant-design-vue": "^3.2.9",

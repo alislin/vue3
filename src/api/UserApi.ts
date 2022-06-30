@@ -2,14 +2,16 @@
  * @Author: Lin Ya
  * @Date: 2022-06-08 10:53:42
  * @LastEditors: Lin Ya
- * @LastEditTime: 2022-06-30 15:43:02
+ * @LastEditTime: 2022-06-30 18:02:24
  * @Description: Api 示例
  */
+import { getConfig } from "../config/config";
 import Fetcher from "../utils/Fetcher";
 
 class UserApi {
     constructor() {
-        Fetcher.BaseUrl = "http://localhost:53000/";
+        let config = getConfig();
+        Fetcher.BaseUrl = config.api;
 
         Fetcher.ErrorResponse = (error: string) => {
             return {

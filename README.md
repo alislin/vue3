@@ -2,7 +2,7 @@
  * @Author: Lin Ya
  * @Date: 2022-06-29 16:52:52
  * @LastEditors: Lin Ya
- * @LastEditTime: 2022-06-30 14:48:36
+ * @LastEditTime: 2022-06-30 18:02:57
  * @Description: file content
 -->
 # Vue3 + TypeScript + Vite + Router + Store + Mock + Scss + ant-design-vue
@@ -29,7 +29,7 @@ Start with mock server
 npm run dev
 
 # run dev and mock server
-npm run dm
+npm run mock
 
 # build
 npm run build
