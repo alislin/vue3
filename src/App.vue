@@ -13,7 +13,7 @@ import { Button } from 'ant-design-vue';
   <div>
     <nav>
       <router-link to="/">Home</router-link> |
-      <router-link to="/hello">Hello</router-link>
+      <router-link to="/hello/welcome">Hello</router-link>
     </nav>
     <div>
       <router-view></router-view>

@@ -1,9 +1,14 @@
+<!--
+ * @Author: Lin Ya
+ * @Date: 2022-06-30 15:40:35
+ * @LastEditors: Lin Ya
+ * @LastEditTime: 2022-06-30 15:53:11
+ * @Description: file content
+-->
 <script setup lang="ts">
-import { ref } from 'vue'
-
-defineProps<{ msg: string }>()
-
-const count = ref(0)
+import { ref } from 'vue';
+defineProps<{ msg?: string }>()
+const count=ref(0);
 </script>
 
 <template>
