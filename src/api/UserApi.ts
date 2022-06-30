@@ -2,10 +2,10 @@
  * @Author: Lin Ya
  * @Date: 2022-06-08 10:53:42
  * @LastEditors: Lin Ya
- * @LastEditTime: 2022-06-29 21:41:42
+ * @LastEditTime: 2022-06-30 14:41:20
  * @Description: Api 示例
  */
-import Fetcher from "../util/Fetcher";
+import Fetcher from "../utils/Fetcher";
 
 class UserApi {
     constructor() {
@@ -32,9 +32,9 @@ class UserApi {
                 if (res) {
                     return res;
                 }
-                return null;
+                return [];
             });
-        return [];
+        return result;
     }
 
 

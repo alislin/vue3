@@ -1,3 +1,10 @@
+<!--
+ * @Author: Lin Ya
+ * @Date: 2022-06-29 16:52:52
+ * @LastEditors: Lin Ya
+ * @LastEditTime: 2022-06-30 14:48:36
+ * @Description: file content
+-->
 # Vue3 + TypeScript + Vite + Router + Store + Mock + Scss + ant-design-vue
 
 This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
@@ -18,5 +25,12 @@ You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/
 Start with mock server 
 
 ```shell
+# run dev
+npm run dev
+
+# run dev and mock server
 npm run dm
+
+# build
+npm run build
 ```

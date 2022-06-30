@@ -1,14 +1,53 @@
+/*
+ * @Author: Lin Ya
+ * @Date: 2022-06-08 10:53:42
+ * @LastEditors: Lin Ya
+ * @LastEditTime: 2022-06-30 14:34:54
+ * @Description: 数据请求
+ */
 class Fetcher {
 
     /** 错误数据返回对象 */
-    public ErrorResponse: (error: string) => {};
+    public ErrorResponse: (error: string) => {} = (err) => { return {} };
     public Hearders: HeadersInit = {};
     public BaseUrl: string = "";
     // public DefaultRequestInit: RequestInit = {};
     /** 加载状态 */
     public Loading: boolean = false;
 
+    /**
+     * 请求检查
+     * @param request request
+     * @returns request
+     */
+    private initRequest(request?: RequestInit) {
+        if (request) {
+
+            let headers = request.headers as Headers;
+            if (request.method?.toUpperCase() !== "GET") {
+                if (!headers.has("Content-Type")) {
+                    headers.set("Content-Type", "application/json")
+                }
+                if (!headers.has("Accept")) {
+                    headers.set("Accept", "application/json")
+                }
+            }
+            return {
+                method: request.method,
+                headers: headers,
+                body: request.body,
+            };
+        }
+        return {};
+    }
+
     public Get<T>(url: string, requestInit?: RequestInit) {
+        if (!requestInit) {
+            requestInit = {
+                method: "GET",
+                headers: this.Hearders,
+            };
+        }
         return this.Fetch<T>(url, requestInit);
     }
 
@@ -63,7 +102,8 @@ class Fetcher {
      */
     public Fetch<T>(url: string, requestInit?: RequestInit): Promise<T> {
         this.Loading = true;
-        let resp = fetch(this.BaseUrl + url, requestInit)
+        let request = this.initRequest(requestInit);
+        let resp = fetch(this.BaseUrl + url, request)
             .then(response => {
                 return this.handleResponse<T>(response);
                 // if (response.status == 200) {

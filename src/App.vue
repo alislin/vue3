@@ -8,12 +8,12 @@ import { Button } from 'ant-design-vue';
   <img alt="Vue logo" src="./assets/logo.png" />
   <div>
     <h2>Vue3 + TypeScript + Vite + Router + Store + Mock + Scss</h2>
-    <Button>按钮</Button>
+    <Button>Antd Button</Button>
   </div>
   <div>
     <nav>
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">关于</router-link>
+      <router-link to="/hello">Hello</router-link>
     </nav>
     <div>
       <router-view></router-view>
