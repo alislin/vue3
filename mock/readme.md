@@ -1,10 +1,3 @@
-<!--
- * @Author: Lin Ya
- * @Date: 2022-06-09 15:54:44
- * @LastEditors: Lin Ya
- * @LastEditTime: 2022-06-29 16:29:20
- * @Description: file content
--->
 ## 初始化和启动
 ```shell
 # 初始化，安装

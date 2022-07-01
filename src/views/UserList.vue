@@ -1,10 +1,4 @@
-<!--
- * @Author: Lin Ya
- * @Date: 2022-06-30 09:19:10
- * @LastEditors: Lin Ya
- * @LastEditTime: 2022-06-30 16:01:27
- * @Description: file content
--->
+
 <template>
     <h1>User list :{{ title }} ({{userList.length}})</h1>
     <template v-for="item in userList">

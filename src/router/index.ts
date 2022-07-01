@@ -10,7 +10,7 @@ import HelloWorld from '../views/HelloWorld.vue';
 import { createRouter, createWebHashHistory } from 'vue-router'
 const routes = [
     { path: '/', component: Home },
-    { path: '/hello', component: HelloWorld },
+    { path: '/hello/:msg?', component: HelloWorld },
   ]
 export const router = createRouter({
     history: createWebHashHistory(),

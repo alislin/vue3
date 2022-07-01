@@ -1,10 +1,3 @@
-/*
- * @Author: Lin Ya
- * @Date: 2022-06-08 10:53:42
- * @LastEditors: Lin Ya
- * @LastEditTime: 2022-06-30 14:34:54
- * @Description: 数据请求
- */
 class Fetcher {
 
     /** 错误数据返回对象 */

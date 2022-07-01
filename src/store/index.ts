@@ -1,7 +1,12 @@
+import { createLogger } from 'vuex'
 import { createStore } from 'vuex'
+import { modules } from './modules'
+import { RootState } from './RootState'
 
-export default createStore({
+export default createStore<RootState>({
   state: {
+    id:"",
+    name:"",
   },
   getters: {
   },
@@ -9,6 +14,8 @@ export default createStore({
   },
   actions: {
   },
-  modules: {
-  }
+  modules,
+  plugins: process.env.NODE_ENV !== 'production'
+    ? [createLogger()]
+    : []
 })

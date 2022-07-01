@@ -2,6 +2,8 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import { Button } from 'ant-design-vue';
+import { useStore } from './store/useStore';
+const store = useStore();
 </script>
 
 <template>
@@ -9,6 +11,7 @@ import { Button } from 'ant-design-vue';
   <div>
     <h2>Vue3 + TypeScript + Vite + Router + Store + Mock + Scss</h2>
     <Button>Antd Button</Button>
+    <h4>Count is : {{ store.getters.getCount.count }}</h4>
   </div>
   <div>
     <nav>

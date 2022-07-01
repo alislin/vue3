@@ -4,11 +4,12 @@ import Antd from 'ant-design-vue'
 import 'ant-design-vue/dist/antd.css';
 import { router } from './router';
 import store from './store'
+import { key } from './store/useStore';
 
 
 
 createApp(App)
-    .use(store)
+    .use(store, key)
     .use(router)
     .use(Antd)
     .mount('#app')
