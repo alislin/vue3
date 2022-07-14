@@ -1,11 +1,4 @@
-<!--
- * @Author: Lin Ya
- * @Date: 2022-06-29 16:52:52
- * @LastEditors: Lin Ya
- * @LastEditTime: 2022-06-30 18:02:57
- * @Description: file content
--->
-# Vue3 + TypeScript + Vite + Router + Store + Mock + Scss + ant-design-vue
+# Vue3 + TypeScript + Vite + Router + Pinia + Mock + Scss + ant-design-vue
 
 This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
