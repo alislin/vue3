@@ -3,13 +3,11 @@ import App from './App.vue'
 import Antd from 'ant-design-vue'
 import 'ant-design-vue/dist/antd.css';
 import { router } from './router';
-import store from './store'
-import { key } from './store/useStore';
+import { createPinia } from 'pinia';
 
-
-
+const pinia = createPinia()
 createApp(App)
-    .use(store, key)
+    .use(pinia)
     .use(router)
     .use(Antd)
     .mount('#app')

@@ -11,9 +11,9 @@
   },
   "dependencies": {
     "ant-design-vue": "^3.2.9",
+    "pinia": "^2.0.16",
     "vue": "^3.2.25",
-    "vue-router": "^4.0.16",
-    "vuex": "^4.0.2"
+    "vue-router": "^4.0.16"
   },
   "devDependencies": {
     "@faker-js/faker": "^7.3.0",

@@ -1,13 +1,12 @@
-
 <script setup lang="ts">
 import { ref } from 'vue';
-import { useStore } from '../store/useStore';
+import { useCountStore } from '../stores/count/CountStore';
 defineProps<{ msg?: string }>()
-let store = useStore();
+let store = useCountStore();
 const count = ref(0);
 function add() {
   count.value++;
-  store.commit("setCount", { count: count.value });
+  store.setCount(count.value);
 }
 </script>
 

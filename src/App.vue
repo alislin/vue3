@@ -2,16 +2,19 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import { Button } from 'ant-design-vue';
-import { useStore } from './store/useStore';
-const store = useStore();
+import { useCountStore } from './stores/count/CountStore';
+const countStore = useCountStore();
+function storeCountAdd() {
+  countStore.setCount(countStore.count + 1);
+}
 </script>
 
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
   <div>
     <h2>Vue3 + TypeScript + Vite + Router + Store + Mock + Scss</h2>
-    <Button>Antd Button</Button>
-    <h4>Count is : {{ store.getters.getCount.count }}</h4>
+    <Button @click="storeCountAdd">Antd Button ++</Button>
+    <h4>Store Count is : {{ countStore.getCount }}</h4>
   </div>
   <div>
     <nav>
